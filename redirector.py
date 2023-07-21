@@ -59,29 +59,5 @@ def template(target_url):
     return html.replace("{{ TARGET_URL }}", target_url)
 
 
-#%%
-def template(target_url):
-    html = '''
-    <!doctype html>
-    <html lang=en-us>
-
-    <head>
-        <title>{{ TARGET_URL }}</title>
-        <meta name=robots content="noindex">
-        <meta charset=utf-8>
-        <meta http-equiv=refresh content="0; url={{ TARGET_URL }}">
-    </head>
-    <body>
-        <p>
-            Redirecting to <a href="{{ TARGET_URL }}">{{ TARGET_URL }}</a>
-        </p>
-    </body>
-    </html>
-    '''
-    return html.replace("{{ TARGET_URL }}", target_url)
-
-# %%
-
-
 if __name__ == "__main__":
     main()
